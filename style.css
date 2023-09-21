@@ -1,0 +1,42 @@
+body {
+    height: 5000px; 
+    padding-top: 70px;
+}
+
+nav {
+    display: flex;
+    background-color: cadetblue;
+    height: 65px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    justify-content: center;
+    color: white;
+}
+
+.project {
+    display: flex;
+    flex-direction: column;
+    border-width: 10px;
+    width: fit-content;
+    padding: 10px;
+    border: solid;
+    align-items: center;
+}
+
+button,
+.projectTitle {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.projectImg {
+    border-radius: 5px;
+    border-right: 100px;
+    border-color: black;
+    width: 200px;
+    height: 200px;
+    margin-bottom: 10px;
+}
+
