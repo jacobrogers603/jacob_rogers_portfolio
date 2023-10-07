@@ -47,8 +47,15 @@ nav {
 
 button,
 .projectTitle {
-    margin-top: 10px;
-    margin-bottom: 10px;
+    margin-top: 3px;
+    margin-bottom: 3px;
+    color: black;
+    text-decoration: none;
+    font-weight: 700;
+}
+
+.projectTitle:hover {
+    text-decoration: underline;
 }
 
 .projectImg {
@@ -60,14 +67,62 @@ button,
     margin-bottom: 10px;
 }
 
+.imageContainer {
+    width: 200px;
+    transition: transform 0.3s ease;
+}
+
+.imageContainer:hover {
+    transform: scale(1.1);
+}
+
 .button-link {
     display: inline-block;
     padding: 10px 15px;
-    background-color: #007BFF;
+    background-color: cadetblue;
     color: #FFFFFF;
     border: none;
     border-radius: 5px;
     text-decoration: none;
     cursor: pointer;
+    transition: transform 0.3s ease;
 }
 
+.button-link:hover {
+    transform: scale(1.1);    
+}
+
+h4 {
+    margin: 0;
+}
+
+ul{
+    list-style-type: none;
+    padding-left: 0;
+}
+
+ul li{
+    display: inline-block;
+    margin-right: 10px;
+}
+
+.htmlUsed{
+    color: rgb(106, 190, 205);
+    font-weight: 700;
+    font-size: 1.1rem;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.cssUsed {
+    color: rgb(62, 84, 163);
+    font-weight: 700;
+    font-size: 1.1rem;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.frontendUsed {
+    color: rgba(14, 216, 88, 0.75);
+    font-weight: 700;
+    font-size: 1.1rem;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
