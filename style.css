@@ -140,6 +140,7 @@ ul li{
 }
 
 /* See Code button */
+/* See demo button */
 
 .seeCodeButton {
     height: 1.8rem;
@@ -149,14 +150,35 @@ ul li{
     border: none;
     border-radius: 5%;
     position: absolute;
-    bottom: 1rem;
-    left: 1rem;
     transition:
         transform 0.2s ease,
         font-weight 0.2s ease;
+    bottom: 1rem;
+    left: 1rem;
 }
 
-.seeCodeButton:hover {
-   transform: scale(1.1);
-   font-weight: 700;
+.seeCodeButton:hover{
+    transform: scale(1.1);
+    font-weight: 700;
 }
+
+.seeDemoButton {
+    height: 1.8rem;
+    width: 5rem;
+    background-color:black;
+    color: white;
+    border: none;
+    border-radius: 5%;
+    position: absolute;
+    transition:
+        transform 0.2s ease,
+        font-weight 0.2s ease;
+    bottom: 1rem;
+    left: 7rem;
+}
+
+.seeDemoButton:hover{
+    transform: scale(1.1);
+    font-weight: 700;
+}
+
