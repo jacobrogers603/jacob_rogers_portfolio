@@ -8,6 +8,7 @@ body {
     height: 100vh; 
     padding-top: 5rem;
     align-items: center;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
 /* Nav bar */
@@ -32,15 +33,15 @@ nav {
     bottom: 1.5rem;
     right: 2rem;
 }
-
 /* Project Grid */
 
 .projectGrid {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    justify-items: center;
+    grid-template-columns: repeat(auto-fill, minmax(0, 23.5rem));
+    justify-content: center;
     width: 80vw;
     max-width: 1500px;
+    gap: 2rem;
 }
 
 /* Project box */
@@ -48,10 +49,9 @@ nav {
 .project {
     display: flex;
     flex-direction: column;
-    width: 23.5rem;
+    width: 100%;
     height: 33.75rem;
     padding: 0;
-    margin: 1rem 1rem;
     border: none;
     border-radius: 3%;
     position: relative;
@@ -61,8 +61,8 @@ nav {
 /* Project Image */
 
 .imageContainer {
-    width: 23.5rem;
-    height: 16.875rem;
+    width: 100%;
+    height: 50%;
     overflow: hidden;
     border-top-left-radius: 3%;
     border-top-right-radius: 3%;
@@ -116,21 +116,18 @@ ul li{
     color: rgb(106, 190, 205);
     font-weight: 700;
     font-size: 1.1rem;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
 .cssUsed {
     color: rgb(62, 84, 163);
     font-weight: 700;
     font-size: 1.1rem;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
 .frontendUsed {
     color: rgba(14, 216, 88, 0.75);
     font-weight: 700;
     font-size: 1.1rem;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
 /* Projet Description */
