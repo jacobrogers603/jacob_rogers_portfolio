@@ -11,6 +11,46 @@ body {
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
+/* Side nav bar */
+
+.sideBar {
+    position: fixed;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    width: 3rem;
+    height: 20rem;
+    top: 13rem;
+}
+
+.linkedin {
+    width: 100%;
+    height: 100%;
+    border: solid;
+    border-color: blue;
+}
+
+.github {
+    width: 100%;
+    height: 100%;
+    border: solid;
+    border-color: black;
+}
+
+.twitter {
+    width: 100%;
+    height: 100%;
+    border: solid;
+    border-color: lightblue;
+}
+
+.cv {
+    width: 100%;
+    height: 100%;
+    border: solid;
+    border-color: gray;
+}
+
 /* Nav bar */
 
 nav {
@@ -33,6 +73,8 @@ nav {
     bottom: 1.5rem;
     right: 2rem;
 }
+
+
 /* Project Grid */
 
 .projectGrid {
