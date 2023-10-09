@@ -22,9 +22,14 @@ body {
     height: 20rem;
     top: 11rem;
     background-color: transparent;
-    color: black;
-    font-weight: 800;
+    font-weight: 800;    
 }
+
+.sideBar a, a:visited, a:hover {
+    text-decoration: none;
+    color: black;
+}
+
     /* > Linkedin  */
 .linkedin {
     display: flex;
@@ -33,7 +38,7 @@ body {
     width: 8rem;
     height: 4rem;
     transform: translateX(-1.5rem);
-    transition: transform 0.2s ease;
+    transition: transform 0.2s ease;    
 }
 
 .linkedin:hover {
