@@ -58,16 +58,24 @@ body {
     align-items: center; 
     width: 8rem;
     height: 4rem;
-    transform: translateX(-1.5rem);
+    transform: translateX(-2rem);
     transition: transform 0.2s ease;    
 }
 
 .sideBarFlag:hover {
     transform: translateX(2rem);
 }
-.sideBarFlag h5 {
+
+.flagTitleContainer {
+    display: flex;
+    align-items: center;
+    width: 4rem;
+    height: 4rem;
+}
+
+.flagTitleContainer h5 {
     margin-left: 0.2rem;
-    width: 3rem;
+    width: 90%;
 }
 
 .iconContainer {
