@@ -1,0 +1,46 @@
+:root {
+    --windows95: rgb(1, 130, 129);
+}
+
+* {
+    margin: 0;
+    padding: 0; 
+    box-sizing: border-box;  
+}
+
+.navFlex {
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4rem;
+    background-color: var(--windows95);
+}
+
+.topNavContent {
+    display: grid;
+    align-items: center;
+    max-width: 1440px;
+    grid-template-columns: 4rem 1.5fr 1fr 1.5fr 4rem;
+}
+
+.topNavContent a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 4rem;
+    width: 4rem;
+}
+
+.homeImg {
+    height: 60%;
+    width: 60%;
+}
+
+.topNavContent h3 {
+    color: white;
+    max-height: 4rem;
+    min-width: 10.113rem;
+}
