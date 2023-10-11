@@ -3,48 +3,24 @@
 }
 
 body {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    padding-top: 5rem;
+    padding-top: 4rem;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-}
-
-/* Nav bar */
-
-nav {
-    display: flex;
-    background-color: var(--windows95);
-    height: 4rem;
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    justify-content: center;
-    align-items: center;
-    color: white;
-    z-index: 1;
-}
-
-.contactLink {
-    position: absolute;
-    top: 1rem;
-    bottom: 1.5rem;
-    right: 2rem;
-}
-
-.home {
-    position: absolute;
-    height: 2rem;
-    width: 2rem;
-    bottom: 1rem;
-    left: 2rem;
 }
 
 /* iframe cv */
 
-iframe {
-    width: 80%;
-    height: 90%;
+.iframeContainer {
+    position: relative;
+    width: 100%;
+    height: calc(100vh - 4rem); /* This subtracts the height of the navbar */
+    overflow: hidden;
+} 
+
+.iframeContainer iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
 }
