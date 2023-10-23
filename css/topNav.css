@@ -6,9 +6,10 @@
     margin: 0;
     padding: 0; 
     box-sizing: border-box;  
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
-.navFlex {
+.topNav {
     position: fixed;
     display: flex;
     justify-content: center;
@@ -19,14 +20,26 @@
     background-color: var(--windows95);
 }
 
-.topNavContent {
+.navGrid {
     display: grid;
+    grid-template-columns: 1fr 4fr 1fr;
+    grid-template-rows: 100%;
+    grid-template-areas: 'house title contact';
     align-items: center;
+    justify-items: center;
+    width: 100%;
     max-width: 1440px;
-    grid-template-columns: 4rem 1.5fr 1fr 1.5fr 4rem;
 }
 
-.topNavContent a {
+.house {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+}
+
+.house a {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -35,12 +48,34 @@
 }
 
 .homeImg {
-    height: 60%;
-    width: 60%;
+    max-width: 60%;
+    max-height: 60%;
+    object-fit: contain;    
+    transition: transform 0.2s ease;
 }
 
-.topNavContent h3 {
-    color: white;
-    max-height: 4rem;
-    min-width: 10.113rem;
+.homeImg:hover {
+    transform: scale(1.1);
+}
+
+.titleDiv {
+   color: white;
+   text-align: center;
+}
+
+.contactMeNav {
+    text-align: center;
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+    background-color: yellow;
+    border-radius: 5%;
+    margin-left: 0.5rem;
+    margin-right: 0.5rem;
+    padding: 0.5rem 0.5rem;
+    transition: transform 0.2s ease;
+}
+
+.contactMeNav:hover {
+    transform: scale(1.025);
 }
