@@ -17,6 +17,7 @@
     </script>
     <script type="text/javascript">
       window.onload = function () {
+        const messageSentDialog = document.getElementById("messageSent");
         document
           .getElementById("emailForm")
           .addEventListener("submit", function (event) {
@@ -32,6 +33,11 @@
                 console.log("FAILED...", error);
               }
             );
+            // Display message sent for 3 seconds
+            messageSentDialog.style.display = "block";
+            setTimeout(function () {
+              messageSentDialog.style.display = "none";
+            }, 3000);
           });
       };
     </script>
@@ -50,6 +56,7 @@
       </div>
     </nav>
     <main>
+      <dialog id="messageSent">Message Sent</dialog>
       <form id="emailForm">
         <input type="hidden" name="contact_number" />
         <label for="from_name">Name:</label>
@@ -64,7 +71,6 @@
           rows="10"></textarea>
         <input type="submit" value="Submit" />
       </form>
-      <dialog open>Message Sent</dialog>
     </main>
   </body>
 </html>

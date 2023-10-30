@@ -16,3 +16,7 @@ form {
     display: grid;
     grid-template-columns: 1fr;
 }
+
+dialog {
+    /* margin: auto; */
+}
