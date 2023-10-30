@@ -6,6 +6,35 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Contact Me</title>
     <link rel="stylesheet" href="../css/topNav.css" />
+    <link rel="stylesheet" href="../css/contact.css" />
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script type="text/javascript">
+      (function () {
+        emailjs.init("O1TDLJrE8cS5nIAh1");
+      })();
+    </script>
+    <script type="text/javascript">
+      window.onload = function () {
+        document
+          .getElementById("emailForm")
+          .addEventListener("submit", function (event) {
+            event.preventDefault();
+            // generate a five digit number for the contact_number variable
+            this.contact_number.value = (Math.random() * 100000) | 0;
+            // these IDs from the previous steps
+            emailjs.sendForm("service_gjz3rtl", "email_form", this).then(
+              function () {
+                console.log("SUCCESS!");
+              },
+              function (error) {
+                console.log("FAILED...", error);
+              }
+            );
+          });
+      };
+    </script>
   </head>
   <body>
     <nav class="topNav">
@@ -20,5 +49,22 @@
         </div>
       </div>
     </nav>
+    <main>
+      <form id="emailForm">
+        <input type="hidden" name="contact_number" />
+        <label for="from_name">Name:</label>
+        <input type="text" name="from_name" class="nameField" />
+        <label for="from_email">Email:</label>
+        <input type="text" name="from_email" class="emailField" required />
+        <label for="message">Message:</label>
+        <textarea
+          name="message"
+          class="messageField"
+          cols="30"
+          rows="10"></textarea>
+        <input type="submit" value="Submit" />
+      </form>
+      <dialog open>Message Sent</dialog>
+    </main>
   </body>
 </html>
