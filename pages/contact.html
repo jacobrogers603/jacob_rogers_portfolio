@@ -56,21 +56,89 @@
       </div>
     </nav>
     <main>
-      <dialog id="messageSent">Message Sent</dialog>
-      <form id="emailForm">
-        <input type="hidden" name="contact_number" />
-        <label for="from_name">Name:</label>
-        <input type="text" name="from_name" class="nameField" />
-        <label for="from_email">Email:</label>
-        <input type="text" name="from_email" class="emailField" required />
-        <label for="message">Message:</label>
-        <textarea
-          name="message"
-          class="messageField"
-          cols="30"
-          rows="10"></textarea>
-        <input type="submit" value="Submit" />
-      </form>
+      <div class="container">
+        <div class="blurb">
+          <h2>Get in contact with me if you're interested in my abilities!</h2>
+          <h3>
+            Check out one of my socials, view my resume, or send me an email and
+            I'll get back to you promptly
+          </h3>
+        </div>
+
+        <div class="contactMethods">
+          <a
+            href="https://www.linkedin.com/in/jacob-rogers-3b8332151/"
+            class="contactMethod"
+            id="linkedin"
+            target="_blank">
+            <div class="imgContainer">
+              <img src="../assets/images/linkedin.png" alt="linkedin icon" />
+            </div>
+            <div class="textContainer">
+              <p>Linkedin</p>
+            </div>
+          </a>
+          <a
+            href="https://github.com/jacobrogers603"
+            class="contactMethod"
+            id="github"
+            target="_blank">
+            <div class="imgContainer">
+              <img src="../assets/images/github.png" alt="github icon" />
+            </div>
+            <div class="textContainer">
+              <p>Github</p>
+            </div>
+          </a>
+          <a
+            href="https://twitter.com/jacobRogers603"
+            class="contactMethod"
+            id="twitter"
+            target="_blank">
+            <div class="imgContainer">
+              <img src="../assets/images/twitter.png" alt="twitter or x icon" />
+            </div>
+            <div class="textContainer">
+              <p>Twitter/X</p>
+            </div>
+          </a>
+          <a href="../pages/cv.html" class="contactMethod" id="cv">
+            <div class="imgContainer">
+              <img src="../assets/images/resume.png" alt="resume icon" />
+            </div>
+            <div class="textContainer">
+              <p>View My Resume</p>
+            </div>
+          </a>
+          <a
+            class="contactMethod"
+            href="mailto:rogersair2@outlook.com"
+            id="email">
+            <div class="imgContainer">
+              <img src="../assets/images/email.png" alt="email icon" />
+            </div>
+            <div class="textContainer">
+              <p>rogersair2@outlook.com</p>
+            </div>
+          </a>
+        </div>
+
+        <form id="emailForm">
+          <input type="hidden" name="contact_number" />
+          <label for="from_name">Name:</label>
+          <input type="text" name="from_name" class="nameField" />
+          <label for="from_email">Email:</label>
+          <input type="text" name="from_email" class="emailField" required />
+          <label for="message">Message:</label>
+          <textarea
+            name="message"
+            class="messageField"
+            cols="30"
+            rows="10"></textarea>
+          <input type="submit" value="Submit" />
+        </form>
+        <dialog id="messageSent">Message Sent</dialog>
+      </div>
     </main>
   </body>
 </html>

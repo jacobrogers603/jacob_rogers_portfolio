@@ -2,6 +2,13 @@
     --windows95: rgb(1, 130, 129);
 }
 
+* {
+    margin: 0;
+    padding: 0; 
+    box-sizing: border-box;  
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
 body {
     display: flex;
     align-items: center;
@@ -12,11 +19,100 @@ body {
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
+.container {
+    display: grid;
+    align-items: center;
+    transform: translateY(-4rem);
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 0.25fr 0.65fr 0.1fr;
+}
+
+.blurb {
+    grid-area: 1/1/1/3;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr;
+    text-align: center;
+}
+
 form {
+    grid-area: 2/2/2/2;
     display: grid;
     grid-template-columns: 1fr;
 }
 
 dialog {
-    /* margin: auto; */
+    margin: auto;
+}
+
+textarea {
+    resize: none;
+}
+
+.contactMethod {
+    display: grid;
+    width: 60%;
+    margin: auto;
+    grid-template-columns: 0.25fr 0.75fr;
+    align-items: center;
+    justify-items: center;
+    text-decoration: none;
+    color: black;
+}
+
+.textContainer {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    justify-content: left;
+    align-items: center;
+}
+
+.imgContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 70%;
+    width: 70%;
+}
+
+.imgContainer img {
+    height: 100%;
+    width: 100%;
+    object-fit: scale-down;
+}
+
+.contactMethods {
+    display: grid;
+    row-gap: 4px;
+    grid-template-rows: repeat(5, 1fr);
+}
+
+#linkedin {
+    background-color: rgba(10, 102, 194, 0.85);
+    grid-area: 1/1/1/1;
+}
+
+#github {
+    background-color: gray;
+    grid-area: 2/1/2/1;
+}
+
+#twitter {
+    background-color: skyblue;
+    grid-area: 3/1/3/1;
+}
+
+#email {
+    background-color: beige;
+    grid-area: 4/1/4/1;
+}
+
+#cv {
+    background-color: var(--windows95);
+    grid-area: 5/1/5/1;
+}
+
+dialog {
+    grid-area: 3/2/3/2;
 }
