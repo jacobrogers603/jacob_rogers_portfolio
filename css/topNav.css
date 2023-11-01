@@ -10,11 +10,13 @@
 
 .topNav {
     position: fixed;
+    justify-self: flex-start;
     display: flex;
     justify-content: center;
     top: 0;
     left: 0;
-    right: 0;
+    width: 100%;
+    min-width: 300px;
     height: 4rem;
     background-color: var(--windows95);
     z-index: 99;
@@ -61,6 +63,7 @@
 .titleDiv {
    color: white;
    text-align: center;
+   min-width: 200px;
 }
 
 .contactMeNav {
