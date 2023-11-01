@@ -6,8 +6,7 @@
     margin: 0;
     padding: 0; 
     box-sizing: border-box;  
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-}
+    font-family: sans-serif, "Arial";}
 
 .topNav {
     position: fixed;
@@ -18,6 +17,7 @@
     right: 0;
     height: 4rem;
     background-color: var(--windows95);
+    z-index: 99;
 }
 
 .navGrid {
