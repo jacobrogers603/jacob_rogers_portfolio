@@ -18,11 +18,14 @@
     <script type="text/javascript">
       window.onload = function () {
         const messageSentDialog = document.getElementById("messageSent");
+        const textarea = document.getElementById("textBox");
+        const emailText = document.getElementById("emailText");
+        const nameText = document.getElementById("nameText");
         document
           .getElementById("emailForm")
           .addEventListener("submit", function (event) {
             event.preventDefault();
-            // generate a five digit number for the contact_number variable
+            // generate a five-digit number for the contact_number variable
             this.contact_number.value = (Math.random() * 100000) | 0;
             // these IDs from the previous steps
             emailjs.sendForm("service_gjz3rtl", "email_form", this).then(
@@ -37,6 +40,9 @@
             messageSentDialog.style.display = "block";
             setTimeout(function () {
               messageSentDialog.style.display = "none";
+              textarea.value = "";
+              emailText.value = "";
+              nameText.value = "";
             }, 3000);
           });
       };
@@ -99,6 +105,7 @@
             <input
               type="text"
               name="from_name"
+              id="nameText"
               class="nameField"
               placeholder=" Your name" />
           </div>
@@ -106,6 +113,7 @@
             <input
               type="email"
               name="from_email"
+              id="emailText"
               class="emailField"
               placeholder=" Your email"
               required />
@@ -113,6 +121,7 @@
           <textarea
             name="message"
             class="messageField"
+            id="textBox"
             placeholder=" Compose your message"></textarea>
           <input id="submitBtn" type="submit" value="Send" />
         </form>
