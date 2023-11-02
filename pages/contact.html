@@ -17,6 +17,7 @@
     </script>
     <script type="text/javascript">
       window.onload = function () {
+        const messageSentDialog = document.getElementById("messageSent");
         document
           .getElementById("emailForm")
           .addEventListener("submit", function (event) {
@@ -32,6 +33,11 @@
                 console.log("FAILED...", error);
               }
             );
+            // Display message sent for 3 seconds
+            messageSentDialog.style.display = "block";
+            setTimeout(function () {
+              messageSentDialog.style.display = "none";
+            }, 3000);
           });
       };
     </script>
@@ -49,22 +55,69 @@
         </div>
       </div>
     </nav>
-    <main>
-      <form id="emailForm">
-        <input type="hidden" name="contact_number" />
-        <label for="from_name">Name:</label>
-        <input type="text" name="from_name" class="nameField" />
-        <label for="from_email">Email:</label>
-        <input type="text" name="from_email" class="emailField" required />
-        <label for="message">Message:</label>
-        <textarea
-          name="message"
-          class="messageField"
-          cols="30"
-          rows="10"></textarea>
-        <input type="submit" value="Submit" />
-      </form>
-      <dialog open>Message Sent</dialog>
-    </main>
+    <div class="centerBlock">
+      <div class="leftBlock">
+        <a
+          href="https://www.linkedin.com/in/jacob-rogers-3b8332151/"
+          target="_blank"
+          id="linkedin"
+          class="contactMethod">
+          <img src="../assets/images/linkedin.png" alt="linkedin icon" />
+          <p>Linkedin</p>
+        </a>
+        <a
+          href="https://github.com/jacobrogers603"
+          target="_blank"
+          id="github"
+          class="contactMethod">
+          <img src="../assets/images/github.png" alt="github icon" />
+          <p>Github</p>
+        </a>
+        <a
+          href="https://twitter.com/jacobRogers603"
+          target="_blank"
+          id="twitter"
+          class="contactMethod">
+          <img src="../assets/images/twitter.png" alt="twitter/x icon" />
+          <p>Twitter/X</p>
+        </a>
+        <a href="../pages/cv.html" id="cv" class="contactMethod">
+          <img src="../assets/images/resume.png" alt="resume icon" />
+          <p>My Resume</p>
+        </a>
+      </div>
+
+      <div class="rightBlock">
+        <h2>Send Me an Email!</h2>
+        <p>I'll get back to you promptly</p>
+        <form id="emailForm">
+          <input
+            type="hidden"
+            name="contact_number"
+            placeholder="Enter your email" />
+          <div class="nameAndEmail">
+            <input
+              type="text"
+              name="from_name"
+              class="nameField"
+              placeholder=" Your name" />
+          </div>
+          <div class="nameAndEmail">
+            <input
+              type="email"
+              name="from_email"
+              class="emailField"
+              placeholder=" Your email"
+              required />
+          </div>
+          <textarea
+            name="message"
+            class="messageField"
+            placeholder=" Compose your message"></textarea>
+          <input id="submitBtn" type="submit" value="Send" />
+        </form>
+      </div>
+      <dialog id="messageSent">Message Sent</dialog>
+    </div>
   </body>
 </html>

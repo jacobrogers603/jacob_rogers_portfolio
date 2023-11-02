@@ -8,11 +8,11 @@
 }
 
 body {
+    background-color: azure;
     display: flex;
     flex-direction: column;
     padding-top: 5rem;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-}
+    font-family: sans-serif, "Arial";}
 
 /* Main Container */
 
@@ -159,6 +159,7 @@ nav {
     position: relative;
     box-shadow: 0.05rem 0.05rem 0.05rem var(--windows95);
     min-width: 279px;
+    background-color: white;
 }
 
 /* Project Image */
