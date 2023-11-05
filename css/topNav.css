@@ -37,7 +37,14 @@
     place-items: center;
 }
 
-.contactAndHamburger img {
+.contactAndHamburger button {
+    height: fit-content;
+    width: fit-content;
+    background-color: transparent;
+    border: none;
+}
+
+.contactAndHamburger > button > img {
     height: 70%;
 }
 

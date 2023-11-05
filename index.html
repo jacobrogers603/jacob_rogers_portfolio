@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="css/index.css" />
     <link rel="stylesheet" href="css/topNav.css" />
     <script src="assets/js/index.js"></script>
+    <script src="assets/js/navbar.js"></script>
   </head>
 
   <body>
@@ -18,7 +19,9 @@
           <h3>Jacob Rogers, Software Engineer</h3>
         </div>
         <div class="contactAndHamburger">
-          <img src="assets/images/hamburgerMenu.png" alt="hamburger menu icon">
+          <button>
+            <img id="hamburgerMenuIcon" src="assets/images/hamburgerMenu.png" alt="hamburger menu icon" onclick="toggleHamburgerIcon()">
+          </button>
           <a class="contactMeNav" href="pages/contact.html">Contact Me</a>
         </div>
       </div>
