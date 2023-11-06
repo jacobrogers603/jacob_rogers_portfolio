@@ -4,8 +4,9 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../css/projectPage.css" />
     <link rel="stylesheet" href="../css/topNav.css" />
-    <title>Document</title>
+    <title><PROJECT TITLE></title>
   </head>
 
   <body>
@@ -20,6 +21,15 @@
         <a class="contactMeNav" href="../pages/contact.html">Contact Me</a>
       </div>
     </nav>
-    <main></main>
+    <iframe
+      src="<SRC TO WEBSITE>"
+      class="responsive-iframe">
+    </iframe>
   </body>
 </html>
+
+// replace the src in the iframe to be where your project is hosted on the internet.
+// change the title
+// update the index page of your portfolio to account for this project, and rename this file accordingly
+// done
+
