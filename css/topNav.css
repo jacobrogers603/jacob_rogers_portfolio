@@ -6,7 +6,8 @@
     margin: 0;
     padding: 0; 
     box-sizing: border-box;  
-    font-family: sans-serif, "Arial";}
+    font-family: sans-serif, "Arial";
+}
 
 .topNav {
     position: fixed;
@@ -25,12 +26,28 @@
 .navGrid {
     display: grid;
     grid-template-columns: 1fr 4fr 1fr;
-    grid-template-rows: 100%;
-    grid-template-areas: 'house title contact';
     align-items: center;
     justify-items: center;
+    gap: 1rem;
     width: 100%;
     max-width: 1440px;
+}
+
+.contactAndHamburger {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    place-items: center;
+}
+
+.contactAndHamburger button {
+    height: fit-content;
+    width: 3.125rem;
+    background-color: transparent;
+    border: none;
+}
+
+.contactAndHamburger > button > img {
+    height: 70%;
 }
 
 .house {
@@ -81,4 +98,10 @@
 
 .contactMeNav:hover {
     transform: scale(1.025);
+}
+
+@media (min-width: 415px) {
+    .contactAndHamburger img {
+        display: none;
+    }
 }

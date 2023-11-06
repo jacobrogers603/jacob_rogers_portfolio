@@ -7,7 +7,9 @@
     <title>Jacob Rogers Portfolio</title>
     <link rel="stylesheet" href="css/index.css" />
     <link rel="stylesheet" href="css/topNav.css" />
+    <link rel="stylesheet" href="css/auxiliaryNav.css">
     <script src="assets/js/index.js"></script>
+    <script src="assets/js/navbar.js"></script>
   </head>
 
   <body>
@@ -17,8 +19,38 @@
         <div class="titleDiv">
           <h3>Jacob Rogers, Software Engineer</h3>
         </div>
-        <a class="contactMeNav" href="pages/contact.html">Contact Me</a>
+        <div class="contactAndHamburger">
+          <button>
+            <img id="hamburgerMenuIcon" src="assets/images/hamburgerMenu.png" alt="hamburger menu icon" onclick="toggleHamburgerIcon()">
+          </button>
+          <a class="contactMeNav" href="pages/contact.html">Contact Me</a>
+        </div>
       </div>
+    </nav>
+    <nav id="auxiliaryNav">
+      <ul>
+        <a class="auxiliaryLink" href="https://www.linkedin.com/in/jacob-rogers-3b8332151/" target="_blank">
+          <img class="auxiliaryIcon" src="assets/images/linkedin.png" alt="linkedin Icon">
+        </a>
+        <a href="https://github.com/jacobrogers603" target="_blank" class="auxiliaryLink">
+          <img class="auxiliaryIcon" src="assets/images/github.png" alt="github Icon">
+        </a>
+        <a href="https://twitter.com/jacobRogers603" target="_blank" class="auxiliaryLink">
+          <img class="auxiliaryIcon" src="assets/images/twitter.png" alt="twitter Icon">
+        </a>
+        <a href="mailto:rogersair2@outlook.com" class="auxiliaryLink">
+          <img class="auxiliaryIcon" src="assets/images/email.png" alt="email Icon">
+        </a>
+        <a href="pages/cv.html" class="auxiliaryLink">
+          <img class="auxiliaryIcon" src="assets/images/resume.png" alt="resume Icon">
+        </a>
+      </ul>
+      <select name="filter" id="project-filter">
+        <option value="">Filter</option>
+        <option value="HTML">HTML</option>
+        <option value="CSS">CSS</option>
+        <option value="JS">JavaScript</option>
+      </select>
     </nav>
     <header>
       <div class="headerContent">
