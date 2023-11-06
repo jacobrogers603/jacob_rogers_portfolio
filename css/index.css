@@ -46,11 +46,12 @@ header img {
 .headerText {
     text-align: center;
     color: white;
-    width: 90%;    
+    width: 90%;  
+    font-size: xx-large;  
 }
 
 .headerContent h2 {
-    font-size: medium;
+    font-size: x-large;
     color: silver;
 }
 
@@ -333,7 +334,7 @@ ul li{
     font-size: 1.1rem;
 }
 
-/* Projet Description */
+/* Project Description */
 
 .projectDesc {
     overflow-y: scroll;
@@ -396,13 +397,20 @@ ul li{
     }
 }
 
+/* the project grid becomes 1 column here */
 @media (max-width: 943px) {
     .headerContent {
         grid-template-columns: 1fr;
         max-width: 23.5rem;
     }
+
+    .headerText,
+    .headerText h2 {
+        font-size: medium;
+    }
 }
 
+/* mobile is 414px and below */
 @media (max-width: 415px) {
     .rightSideBar,
     .leftSideBar {
