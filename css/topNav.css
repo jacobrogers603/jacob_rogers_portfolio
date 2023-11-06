@@ -6,7 +6,8 @@
     margin: 0;
     padding: 0; 
     box-sizing: border-box;  
-    font-family: sans-serif, "Arial";}
+    font-family: sans-serif, "Arial";
+}
 
 .topNav {
     position: fixed;
@@ -27,6 +28,7 @@
     grid-template-columns: 1fr 4fr 1fr;
     align-items: center;
     justify-items: center;
+    gap: 1rem;
     width: 100%;
     max-width: 1440px;
 }
@@ -39,7 +41,7 @@
 
 .contactAndHamburger button {
     height: fit-content;
-    width: fit-content;
+    width: 3.125rem;
     background-color: transparent;
     border: none;
 }
