@@ -1,3 +1,19 @@
+window.onload = function () {
+  var htmlBoxAux = document.getElementById("htmlBoxAux");
+  var htmlBox = document.getElementById("htmlBox");
+  var cssBoxAux = document.getElementById("cssBoxAux");
+  var cssBox = document.getElementById("cssBox");
+  var jsBoxAux = document.getElementById("jsBoxAux");
+  var jsBox = document.getElementById("jsBox");
+
+  htmlBoxAux.checked = true;
+  htmlBox.checked = true;
+  cssBoxAux.checked = true;
+  cssBox.checked = true;
+  jsBoxAux.checked = true;
+  jsBox.checked = true;
+};
+
 // Function to make the filter drop down menu appear or hide.
 function filterDropDownToggle(input) {
   var listOfLangs;
@@ -18,19 +34,19 @@ function filterDropDownToggle(input) {
 
 // A function to check a checkbox if its parent container is clicked.
 function optionSelected(lang) {
-    var htmlBoxAux = document.getElementById("htmlBoxAux");
-    var htmlBox = document.getElementById("htmlBox");
-    var cssBoxAux = document.getElementById("cssBoxAux");
-    var cssBox = document.getElementById("cssBox");
-    var jsBoxAux = document.getElementById("jsBoxAux");
-    var jsBox = document.getElementById("jsBox");
+  var htmlBoxAux = document.getElementById("htmlBoxAux");
+  var htmlBox = document.getElementById("htmlBox");
+  var cssBoxAux = document.getElementById("cssBoxAux");
+  var cssBox = document.getElementById("cssBox");
+  var jsBoxAux = document.getElementById("jsBoxAux");
+  var jsBox = document.getElementById("jsBox");
 
   switch (lang) {
-    case "html":      
+    case "html":
       htmlBox.checked = !htmlBox.checked;
       htmlBoxAux.checked = !htmlBoxAux.checked;
       break;
-    case "css":      
+    case "css":
       cssBox.checked = !cssBox.checked;
       cssBoxAux.checked = !cssBoxAux.checked;
       break;
@@ -44,13 +60,13 @@ function optionSelected(lang) {
   var cssUsed = false;
   var jsUsed = false;
 
-  if(htmlBox.checked){
+  if (htmlBox.checked) {
     htmlUsed = true;
   }
-  if(cssBox.checked){
+  if (cssBox.checked) {
     cssUsed = true;
   }
-  if(jsBox.checked){
+  if (jsBox.checked) {
     jsUsed = true;
   }
 
@@ -69,41 +85,40 @@ window.addEventListener("resize", function (event) {
 });
 
 // Filter the project cards based on the dropdown menu selections.
-function filterCards(htmlUsed, cssUsed, jsUsed){
-    console.log(htmlUsed, cssUsed, jsUsed);
-    // Find the project grid.
-    var projectGrid = document.getElementById('projectGrid');
-    
-    // Find all the cards and loop through them.
-    var projects = projectGrid.getElementsByClassName('project');
-    
-    // Check if each card has at least one of the langs that are being used.
-    // If it does not, set its display to none or something.
-    for(var project of projects) {
-        var safeFlag = false;
-        
-        var langsUsed = project.querySelector('.langsUsed');
-        var langsUsedChildren = langsUsed.children;
+function filterCards(htmlUsed, cssUsed, jsUsed) {
+  console.log(htmlUsed, cssUsed, jsUsed);
+  // Find the project grid.
+  var projectGrid = document.getElementById("projectGrid");
 
-        for(var lang of langsUsedChildren){
-            if(lang.className === "htmlUsed" && htmlUsed === true){
-                safeFlag = true;
-                break;
-            }
-            if(lang.className === "cssUsed" && cssUsed === true){
-                safeFlag = true;
-                break;
-            }
-            if(lang.className === "jsUsed" && jsUsed === true){
-                safeFlag = true;
-                break;
-            }
-        }
-        if(safeFlag === false){
-            project.style.display = "none";
-        }else{
-            project.style.display = "flex";
-        }
+  // Find all the cards and loop through them.
+  var projects = projectGrid.getElementsByClassName("project");
+
+  // Check if each card has at least one of the langs that are being used.
+  // If it does not, set its display to none or something.
+  for (var project of projects) {
+    var safeFlag = false;
+
+    var langsUsed = project.querySelector(".langsUsed");
+    var langsUsedChildren = langsUsed.children;
+
+    for (var lang of langsUsedChildren) {
+      if (lang.className === "htmlUsed" && htmlUsed === true) {
+        safeFlag = true;
+        break;
+      }
+      if (lang.className === "cssUsed" && cssUsed === true) {
+        safeFlag = true;
+        break;
+      }
+      if (lang.className === "jsUsed" && jsUsed === true) {
+        safeFlag = true;
+        break;
+      }
     }
-
+    if (safeFlag === false) {
+      project.style.display = "none";
+    } else {
+      project.style.display = "flex";
+    }
+  }
 }
