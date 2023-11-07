@@ -1,61 +1,103 @@
 :root {
-    --windows95: rgb(1, 130, 129);
+  --windows95: rgb(1, 130, 129);
 }
 
 * {
-    margin: 0;
-    padding: 0; 
-    box-sizing: border-box;  
-    font-family: sans-serif, "Arial";
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif, "Arial";
 }
 
 #auxiliaryNav {
-    position: fixed;
-    top: 4rem;
-    left: 15%;
-    right: 0;
-    height: 4rem;
-    gap: 0.5rem;
-    padding: 0 0.5rem;
-    border-radius: 0 0 0 3%;
-    background-color: gray;
-    display: grid;
-    grid-template-columns: 1.75fr 1fr;
-    place-items: center;
-    z-index: 99;
-    opacity: 0;
-    transition: opacity 0.25s ease-in-out;
-    pointer-events: none;
+  position: fixed;
+  top: 4rem;
+  left: 0;
+  right: 0;
+  height: 4rem;
+  gap: 0.5rem;
+  padding: 0 0.5rem;
+  border-radius: 0 0 0 3%;
+  background-color: gray;
+  display: grid;
+  grid-template-columns: 1.75fr 1fr;
+  place-items: center;
+  z-index: 99;
+  opacity: 0;
+  transition: opacity 0.25s ease-in-out;
+  pointer-events: none;
 }
 
-#auxiliaryNav ul {
-    display: grid;
-    width: 100%;
-    height: 100%;
-    margin: 0;
-    gap: 0.5rem;
-    grid-template-columns: repeat(5, 1fr);
+#auxLinkList {
+  display: grid;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  gap: 0.5rem;
+  grid-template-columns: repeat(5, 1fr);
 }
 
 .auxiliaryLink {
-    display: grid;  
-    height: 100%;
-    width: 100%;
-    place-items: center;
+  display: grid;
+  height: 100%;
+  width: 100%;
+  place-items: center;
 }
 
 .auxiliaryIcon {
-    max-width: 100%;
-    height: auto;
-    object-fit: contain;
+  max-width: 100%;
+  height: auto;
+  object-fit: contain;
 }
 
-select {
-    background-color: var(--windows95);
-    border: none;
-    border-radius: 10%;
-    padding: 0.25rem;
-    width: 100%;    
-    color: white !important;
+.auxNavRHS {
+  width: 100%;
+  height: 100%;
+  position: relative;
 }
 
+#listButtonAux {
+  height: 1.5rem;
+  width: 1rem;
+  display: grid;
+  grid-template-columns: 1fr 0.5fr;
+  background-color: gray;
+  place-items: start;
+  padding: 0.25rem;
+  border: none;
+}
+
+#listButtonAux img {
+  height: 90%;
+  justify-self: end;
+}
+
+#listButtonAux:hover {
+  cursor: pointer;
+}
+
+#listOfLangsAux {
+  display: grid;
+  background-color: gray;
+  border: solid;
+  margin: 0;
+  list-style: none;
+  grid-template-columns: 1fr;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.25s ease-in-out;
+  z-index: 99;
+}
+
+#listOfLangsAux:hover {
+  cursor: pointer;
+}
+
+#dropdownContainerAuxBar {
+  position: absolute;
+  top: calc(50% - 0.75rem);
+}
+
+input {
+  pointer-events: none;
+}
