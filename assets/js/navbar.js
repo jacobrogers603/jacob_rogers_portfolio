@@ -10,7 +10,7 @@ function toggleHamburgerIcon() {
 
 window.addEventListener('resize', function(event) {
     var width = window.innerWidth;
-    console.log(width);
+
     if(width > 414) {
         auxiliaryNavNonInteractive();
     }
