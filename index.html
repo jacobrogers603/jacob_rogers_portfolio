@@ -10,31 +10,46 @@
     <link rel="stylesheet" href="css/auxiliaryNav.css">
     <script src="assets/js/index.js"></script>
     <script src="assets/js/navbar.js"></script>
+    <script src="assets/js/filter.js"></script>
   </head>
 
   <body>
     <nav class="topNav">
       <div class="navGrid">
         <div class="house"></div>
-        <div class="titleDiv"></div>
-        <div class="contactAndHamburger">
-          <div class="hamburgerOrSelect">
+        <div class="titleDiv"></div>      
+        <div class="navRHS">
+          <div class="hamburgerOrDropdown">
             <button>
               <img id="hamburgerMenuIcon" src="assets/images/hamburgerMenu.png" alt="hamburger menu icon" onclick="toggleHamburgerIcon()">
             </button>
-            <select name="filter" id="project-filter-desktop" class="project-filter">
-              <option value="">Filter</option>
-              <option value="HTML">HTML</option>
-              <option value="CSS">CSS</option>
-              <option value="JS">JavaScript</option>
-            </select>
+            <div class="dropdownContainer" id="dropDownContainerMainNav">
+              <button id="listButton" onclick="filterDropDownToggle()">
+                <p>Filter</p>
+                <img src="assets/images/chevron_down.png" alt="list arrow icon" />
+              </button>
+              <ul id="listOfLangs">
+                <li class="langOption" onclick="optionSelected('html')">
+                  <input type="checkbox" id="htmlBox" />
+                  HTML
+                </li>
+                <li class="langOption" onclick="optionSelected('css')">
+                  <input type="checkbox" id="cssBox" />
+                  CSS
+                </li>
+                <li class="langOption" onclick="optionSelected('js')">
+                  <input type="checkbox" id="jsBox" />
+                  JavaScript
+                </li>
+              </ul>
+            </div>
           </div>
           <a class="contactMeNav" href="pages/contact.html">Contact Me</a>
         </div>
       </div>
     </nav>
     <nav id="auxiliaryNav">
-      <ul>
+      <ul id="auxLinkList">
         <a class="auxiliaryLink" href="https://www.linkedin.com/in/jacob-rogers-3b8332151/" target="_blank">
           <img class="auxiliaryIcon" src="assets/images/linkedin.png" alt="linkedin Icon">
         </a>
@@ -51,12 +66,28 @@
           <img class="auxiliaryIcon" src="assets/images/resume.png" alt="resume Icon">
         </a>
       </ul>
-      <select name="filter" id="project-filter-mobile" class="project-filter">
-        <option value="">Filter</option>
-        <option value="HTML">HTML</option>
-        <option value="CSS">CSS</option>
-        <option value="JS">JavaScript</option>
-      </select>
+      <div class="auxNavRHS">
+        <div class="dropdownContainer" id="dropdownContainerAuxBar">
+          <button id="listButton" id="listButtonAux" onclick="filterDropDownToggle('aux')">
+            <p>Filter</p>
+            <img src="assets/images/chevron_down.png" alt="list arrow icon" />
+          </button>
+          <ul id="listOfLangsAux">
+            <li class="langOption" onclick="optionSelected('html')">
+              <input type="checkbox" id="htmlBoxAux" />
+              HTML
+            </li>
+            <li class="langOption" onclick="optionSelected('css')">
+              <input type="checkbox" id="cssBoxAux" />
+              CSS
+            </li>
+            <li class="langOption" onclick="optionSelected('js')">
+              <input type="checkbox" id="jsBoxAux" />
+              JavaScript
+            </li>
+          </ul>
+        </div>
+      </div>
     </nav>
     <header>
       <div class="headerContent">
@@ -130,7 +161,7 @@
           </a>
         </nav>
       </div>
-      <div class="projectGrid">
+      <div id="projectGrid">
         <div class="project">
           <div class="imageContainer">
             <a href="pages/productReviewCardComp.html">
@@ -146,7 +177,6 @@
           <ul class="langsUsed">
             <li class="htmlUsed">HTML</li>
             <li class="cssUsed">CSS</li>
-            <li class="frontendUsed">FRONTEND</li>
           </ul>
           <p class="projectDesc">
             This project uses front end technology to display a simple example a
@@ -176,7 +206,6 @@
           <ul class="langsUsed">
             <li class="htmlUsed">HTML</li>
             <li class="cssUsed">CSS</li>
-            <li class="frontendUsed">FRONTEND</li>
           </ul>
           <p class="projectDesc">
             This project uses front end technology to display a grading page for
@@ -204,9 +233,7 @@
             <h4>Lorem ipsum dolor sit.</h4>
           </a>
           <ul class="langsUsed">
-            <li class="htmlUsed">HTML?</li>
-            <li class="cssUsed">CSS?</li>
-            <li class="frontendUsed">FRONTEND?</li>
+            <li class="htmlUsed">HTML</li>
           </ul>
           <p class="projectDesc">
             Lorem ipsum dolor sit, amet consectetur adipisicing elit. Tenetur
@@ -244,9 +271,7 @@
             <h4>Lorem ipsum dolor sit.</h4>
           </a>
           <ul class="langsUsed">
-            <li class="htmlUsed">HTML?</li>
-            <li class="cssUsed">CSS?</li>
-            <li class="frontendUsed">FRONTEND?</li>
+            <li class="cssUsed">CSS</li>
           </ul>
           <p class="projectDesc">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. At eius vel
@@ -284,9 +309,8 @@
             <h4>Lorem ipsum dolor sit.</h4>
           </a>
           <ul class="langsUsed">
-            <li class="htmlUsed">HTML?</li>
-            <li class="cssUsed">CSS?</li>
-            <li class="frontendUsed">FRONTEND?</li>
+            <li class="htmlUsed">HTML</li>
+            <li class="cssUsed">CSS</li>
           </ul>
           <p class="projectDesc">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore
@@ -325,9 +349,7 @@
             <h4>Lorem ipsum dolor sit.</h4>
           </a>
           <ul class="langsUsed">
-            <li class="htmlUsed">HTML?</li>
-            <li class="cssUsed">CSS?</li>
-            <li class="frontendUsed">FRONTEND?</li>
+            <li class="jsUsed">JavaScript</li>
           </ul>
           <p class="projectDesc">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. At,
@@ -365,9 +387,9 @@
             <h4>Lorem ipsum dolor sit.</h4>
           </a>
           <ul class="langsUsed">
-            <li class="htmlUsed">HTML?</li>
-            <li class="cssUsed">CSS?</li>
-            <li class="frontendUsed">FRONTEND?</li>
+            <li class="htmlUsed">HTML</li>
+            <li class="cssUsed">CSS</li>
+            <li class="jsUsed">JavaScript</li>
           </ul>
           <p class="projectDesc">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea autem
@@ -382,47 +404,6 @@
             odit ad expedita. Quo sint deserunt magni omnis, fuga dolorum, est
             repudiandae minus enim porro maiores quibusdam? Laudantium eos nulla
             tenetur optio sunt nihil recusandae saepe, nesciunt praesentium.
-          </p>
-          <button
-            class="seeCodeButton"
-            onclick="linkToPage('https://github.com/jacobrogers603')">
-            See Code
-          </button>
-          <button
-            class="seeDemoButton"
-            onclick="linkToInternalPage('index.html')">
-            See Demo
-          </button>
-        </div>
-        <div class="project">
-          <a href="" class="imageContainer">
-            <img
-              src="assets/images/rogersMoose.png"
-              alt="image of project"
-              class="projectImg" />
-          </a>
-          <a href="" class="projectTitle">
-            <h4>Lorem ipsum dolor sit.</h4>
-          </a>
-          <ul class="langsUsed">
-            <li class="htmlUsed">HTML?</li>
-            <li class="cssUsed">CSS?</li>
-            <li class="frontendUsed">FRONTEND?</li>
-          </ul>
-          <p class="projectDesc">
-            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Cum
-            consequuntur maiores amet. Deleniti quos laudantium consequuntur
-            magni praesentium, doloremque aliquid explicabo velit maxime dolor,
-            obcaecati porro neque dignissimos veritatis tempora aperiam
-            voluptate cumque? Quia, doloribus cupiditate explicabo numquam,
-            adipisci nihil dolore dolorem eum est nisi animi, ut eligendi
-            voluptate et atque repellat quisquam consequatur. Iusto laboriosam
-            perspiciatis illum consequuntur asperiores reprehenderit veniam illo
-            totam placeat delectus eos iure architecto quam, similique repellat
-            magni! Recusandae mollitia quis nemo ducimus. Debitis officia
-            quisquam vero tenetur cum nesciunt, est consectetur tempore id,
-            reprehenderit ipsum voluptate nobis deserunt nostrum fuga quidem
-            autem sint magnam! Quas quibusdam cum aliquam quisquam?
           </p>
           <button
             class="seeCodeButton"
