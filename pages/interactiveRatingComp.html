@@ -5,6 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="../css/topNav.css" />
+    <link rel="stylesheet" href="../css/dropdownCheckboxList.css" />
+    <script src="../assets/js/filter.js"></script>
     <title>Document</title>
   </head>
 
@@ -20,6 +22,27 @@
         <a class="contactMeNav" href="../pages/contact.html">Contact Me</a>
       </div>
     </nav>
-    <main></main>
+    <div class="mainContent">
+      <div class="dropdownContainer">
+        <button id="listButton" onclick="filterDropDownToggle()">
+          <p>Filter</p>
+          <img src="../assets/images/chevron_down.png" alt="list arrow icon" />
+        </button>
+        <ul id="listOfLangs">
+          <li class="langOption" onclick="optionSelected('html')">
+            <input type="checkbox" id="htmlBox" />
+            HTML
+          </li>
+          <li class="langOption" onclick="optionSelected('css')">
+            <input type="checkbox" id="cssBox" />
+            CSS
+          </li>
+          <li class="langOption" onclick="optionSelected('js')">
+            <input type="checkbox" id="jsBox" />
+            JavaScript
+          </li>
+        </ul>
+      </div>
+    </div>
   </body>
 </html>
