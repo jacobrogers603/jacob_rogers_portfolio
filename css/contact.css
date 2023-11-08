@@ -18,7 +18,7 @@ body {
     flex-direction: column;
     width: 100%;
     min-height: 100%;
-    background-color: azure;
+    background-color: var(--neutral);
 }
 
 .centerBlock {
@@ -28,7 +28,7 @@ body {
     position: relative;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    background-color:white;
+    background-color:var(--accent);
     border-radius: 10px;
     box-shadow: 0 0 20px rgba(100, 100, 100, 0.2);
     margin-top: 5rem;

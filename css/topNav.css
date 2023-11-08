@@ -55,6 +55,7 @@
   place-items: center;
   height: 70%;
   width: 70%;
+  transform: translateY(-0.5rem);
 }
 
 .hamburgerOrDropdown button {
