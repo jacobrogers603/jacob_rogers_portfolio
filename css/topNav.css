@@ -1,6 +1,4 @@
-:root {
-  --windows95: rgb(1, 130, 129);
-}
+
 
 * {
   margin: 0;
@@ -19,7 +17,7 @@
   width: 100%;
   min-width: 300px;
   height: 4rem;
-  background-color: var(--windows95);
+  background-color: var(--neutral);
   z-index: 99;
 }
 
@@ -92,16 +90,18 @@
 }
 
 .titleDiv {
-  color: white;
+  color: var(--accent);
   text-align: center;
 }
 
 .contactMeNav {
+  width: 7rem;
+  height: 2rem;
   text-align: center;
   text-decoration: none;
-  color: black;
   font-weight: bold;
-  background-color: yellow;
+  background-color: var(--brand);
+  color: var(--accent) !important;
   border-radius: 5%;
   text-align: center;
   margin-left: 0.5rem;
@@ -116,20 +116,25 @@
 
 #dropDownContainerMainNav {
   position: absolute;
-  top: calc(50% - 0.75rem);
+  top: calc(50% - 1rem);
   display: grid;
   align-self: end;
 }
 
 #listButton {
-  height: 1.5rem;
+  height: 2rem;
   width: 7rem;
+  border-radius: 5%;
   display: grid;
   grid-template-columns: 1fr 0.5fr;
-  background-color: gray;
+  background-color: var(--brand);
+  color: var(--accent);
+  font-size: large;
+  font-weight: bold;
   place-items: start;
   padding: 0.25rem;
-  border: none;
+  border: solid;
+  border-color: var(--brand);
 }
 
 #listButton img {
@@ -144,15 +149,17 @@
 #listOfLangs {
   width: 7rem;
   display: grid;
-  background-color: gray;
-  border: solid;
+  background-color: var(--brand);
+  color: var(--accent);
   margin: 0;
+  border-radius: 0 0% 5% 5%;
   list-style: none;
   grid-template-columns: 1fr;
   opacity: 0;
   pointer-events: none;
   transition: opacity 0.25s ease-in-out;
   z-index: 99;
+  transform: translateY(-0.1rem);
 }
 
 #listOfLangs:hover {
@@ -161,6 +168,7 @@
 
 input {
   pointer-events: none;
+  color: var(--accent);
 }
 
 @media (max-width: 415px) {

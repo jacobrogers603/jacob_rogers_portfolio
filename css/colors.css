@@ -1,0 +1,25 @@
+:root {
+  /* Default theme */
+  --brand: #2e3e45;
+  --accent: #71b2f0;
+  --neutral: #faf8fc;
+
+  /* Theme I named dilute */
+  --dilute-brand: rgb(46, 62, 69);
+  --dilute-brand-lite: #2e3e45;
+  --dilute-accent: #71b2f0;
+  --dilute-neutral: #faf8fc;
+
+  /* Theme I named exemption */
+  --exemption-brand: #da1121;
+  --exemption-accent: #c8c7c0;
+  --exemption-neutral: #17181a;
+
+  /* Theme I named vegetable */
+  --vegetable-brand: #379940;
+  --vegetable-accent: #fafdfc;
+  --vegetable-neutral: #252324;
+
+  /* Legacy colors :'( */
+  --windows95: #018281;
+}
