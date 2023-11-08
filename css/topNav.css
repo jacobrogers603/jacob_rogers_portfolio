@@ -141,6 +141,7 @@
   padding: 0.25rem;
   border: solid;
   border-color: var(--brand);
+  transform: translateY(0.57rem);
 }
 
 #listButton img {
