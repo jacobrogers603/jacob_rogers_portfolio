@@ -48,18 +48,22 @@
   border: none;
 }
 
-#hamburgerMenuIcon {
-  height: 70%;
-}
-
 .hamburgerOrDropdown {
   position: relative;
   display: grid;
   grid-template-columns: 1fr;
   place-items: center;
-  height: 100%;
-  width: 100%;
-  min-width: 5rem;
+  height: 70%;
+  width: 70%;
+}
+
+.hamburgerOrDropdown button {
+  height: 2rem;
+  object-fit: scale-down;
+}
+
+#hamburgerMenuIcon {
+  width: 70%;
 }
 
 .house {
@@ -119,6 +123,7 @@
   top: calc(50% - 1rem);
   display: grid;
   align-self: end;
+  margin-right: 2rem;
 }
 
 #listButton {
