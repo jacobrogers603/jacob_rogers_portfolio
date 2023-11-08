@@ -97,12 +97,11 @@ footer {
 }
 
 .footerEmailLink a {
-  color: var(--accent);
+  color: var(--neutral);
   text-decoration: none;
 }
 
 .footerEmailLink a:hover {
-  color: var(--accent);
   text-decoration: underline;
 }
 
@@ -355,7 +354,7 @@ nav {
   height: 2rem;
   width: 7rem;
   background-color: var(--brand);
-  color: var(--accent);
+  color: var(--neutral);
   font-weight: bold;
   border: none;
   border-radius: 5%;
@@ -375,7 +374,7 @@ nav {
   width: 7rem;
   font-weight: bold;
   background-color: var(--brand);
-  color: var(--accent);
+  color: var(--neutral);
   border: none;
   border-radius: 5%;
   position: absolute;
