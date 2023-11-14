@@ -169,7 +169,7 @@
   align-items: center;
 }
 
-input {
+.checkboxInput {
   pointer-events: none;
   color: var(--accent);
 }

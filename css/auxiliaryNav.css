@@ -109,7 +109,7 @@
   color: var(--accent);
 }
 
-input {
+.checkboxInput {
   pointer-events: none;
   margin-right: 1rem;
   margin-left: 1rem;
