@@ -18,18 +18,15 @@
   <body>
     <nav class="topNav">
       <div class="navGrid">
-        <div class="house">
-          <!-- <a href="../index.html">
-            <img class="homeImg" src="assets/images/moose_dilute.png" />
-          </a> -->
-        </div>
-        <div class="titleDiv"></div>      
+        <a class="brandIcon" href="">
+          <img src="assets/images/moose_dilute.png" />
+        </a>  
         <div class="navRHS">
           <div class="hamburgerOrDropdown">
-            <button>
+            <button id="hamburgerMenu">
               <img id="hamburgerMenuIcon" src="assets/images/hamburger_dilute.svg" alt="hamburger menu icon" onclick="toggleHamburgerIcon()">
             </button>
-            <div class="dropdownContainer" id="dropDownContainerMainNav">
+            <div id="dropDownContainerMainNav">
               <button id="listButton" onclick="filterDropDownToggle()">
                 <p>Filter</p>
                 <img src="assets/images/chevron_down.png" alt="list arrow icon" />
@@ -50,7 +47,9 @@
               </ul>
             </div>
           </div>
-          <a class="contactMeNav" href="pages/contact.html">Contact Me</a>
+          <a class="contactMeNav" href="pages/contact.html">
+            <p>Contact Me</p>
+          </a>
         </div>
       </div>
     </nav>
@@ -72,36 +71,34 @@
           <img class="auxiliaryIcon" src="assets/images/resume.png" alt="resume Icon">
         </a>
       </ul>
-      <div class="auxNavRHS">
-        <div class="dropdownContainer" id="dropdownContainerAuxBar">
-          <button id="listButton" id="listButtonAux" onclick="filterDropDownToggle('aux')">
-            <p>Filter</p>
-            <img src="assets/images/chevron_down.png" alt="list arrow icon" />
-          </button>
-          <ul id="listOfLangsAux">
-            <li class="langOption" onclick="optionSelected('html')">
-              <input type="checkbox" id="htmlBoxAux" />
-              HTML
-            </li>
-            <li class="langOption" onclick="optionSelected('css')">
-              <input type="checkbox" id="cssBoxAux" />
-              CSS
-            </li>
-            <li class="langOption" onclick="optionSelected('js')">
-              <input type="checkbox" id="jsBoxAux" />
-              JavaScript
-            </li>
-          </ul>
-        </div>
+      <div class="dropdownContainer" id="dropdownContainerAuxBar">
+        <button id="listButtonAux" id="listButtonAux" onclick="filterDropDownToggle('aux')">
+          <p>Filter</p>
+          <img src="assets/images/chevron_down.png" alt="list arrow icon" />
+        </button>
+        <ul id="listOfLangsAux">
+          <li class="langOption" onclick="optionSelected('html')">
+            <input type="checkbox" id="htmlBoxAux" />
+            HTML
+          </li>
+          <li class="langOption" onclick="optionSelected('css')">
+            <input type="checkbox" id="cssBoxAux" />
+            CSS
+          </li>
+          <li class="langOption" onclick="optionSelected('js')">
+            <input type="checkbox" id="jsBoxAux" />
+            JavaScript
+          </li>
+        </ul>
       </div>
     </nav>
     <header>
       <div class="headerContent">
         <div class="headerText">
-          <h1>Hi, I'm Jacob Rogers</h1>
+          <h1>Hi, I'm Jacob Rogers,</h1>
           <br>
           <h2>
-            a software engineer that is turning ideas into functional websites, take a look at my projects below!
+            a software engineer that is turning ideas into functional websites. Take a look at my projects below!
           </h2>
         </div>
         <img src="assets/images/headerGpt1.png" alt="headerImage" />

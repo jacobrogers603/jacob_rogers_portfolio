@@ -1,4 +1,5 @@
 function toggleHamburgerIcon() {
+    console.log("touching ham icon");
     var hamburgerIcon = document.getElementById('hamburgerMenuIcon');
     
     if (hamburgerIcon.src.includes('hamburger_dilute.svg')) {

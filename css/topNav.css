@@ -24,21 +24,106 @@
 .navGrid {
   display: grid;
   grid-template-columns: 1fr 3fr 2fr;
-  align-items: center;
-  justify-items: center;
+  place-items: center;
   gap: 1rem;
   width: 100%;
   height: 100%;
   max-width: 1440px;
 }
 
+.brandIcon {
+  display: grid;
+  width: 40%;
+  height: 100%;
+  place-items: center;
+}
+
+.brandIcon img {
+  max-height: 3.5rem;
+}
+
 .navRHS {
-  height: 4rem;
-  gap: 1rem;
+  grid-area: 1/3/1/4;
+  height: 100%;
+  width: 100%;
   display: grid;
   grid-template-columns: 1fr 1fr;
+  gap: 1rem;
   place-items: center;
-  place-content: center;
+}
+
+.hamburgerOrDropdown {
+  grid-area: 1/1/1/2;
+  height: 100%;
+  width: 100%;
+  min-width: 6rem;
+  display: grid;
+  place-items: center;
+}
+
+#dropDownContainerMainNav {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: grid;
+  align-items: center;
+  justify-items: end;
+}
+
+#listButton {
+  height: 2rem;
+  width: 6rem;
+  border-radius: 5%;
+  display: grid;
+  grid-template-columns: 1fr 0.5fr;
+  background-color: var(--brand);
+  color: var(--accent);
+  font-size: large;
+  font-weight: bold;
+  place-items: start;
+  padding: 0.25rem;
+  border: solid;
+  border-color: var(--brand);
+}
+
+#listButton img {
+  height: 90%;
+  justify-self: end;
+}
+
+#listButton:hover {
+  cursor: pointer;
+}
+
+#listOfLangs {
+  position: absolute;
+  top: calc(50% + 1rem);
+  right: 0;
+  display: grid;
+  background-color: var(--brand);
+  color: var(--accent);
+  margin: 0;
+  list-style: none;
+  grid-template-columns: 1fr;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.25s ease-in-out;
+  z-index: 99;
+  border-radius: 5% 5% 5% 5%;
+  min-width: 10rem;
+  height: 6rem;
+}
+
+#hamburgerMenu {
+  height: 100%;
+  min-width: 40%;
+  display: none;
+  place-items: center;
+}
+
+#hamburgerMenu img {
+  max-height: 3.5rem;
+  width: 70%;
 }
 
 .navRHS button {
@@ -48,60 +133,9 @@
   border: none;
 }
 
-.hamburgerOrDropdown {
-  position: relative;
-  display: grid;
-  grid-template-columns: 1fr;
-  place-items: center;
-  height: 70%;
-  width: 70%;
-  transform: translateY(-0.5rem);
-}
-
-.hamburgerOrDropdown button {
-  height: 2rem;
-  object-fit: scale-down;
-}
-
-#hamburgerMenuIcon {
-  width: 70%;
-}
-
-.house {
-  display: flex;
-  width: 100%;
-  height: 100%;
-  align-items: center;
-  justify-content: center;
-}
-
-.house a {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 4rem;
-  width: 4rem;
-}
-
-.homeImg {
-  max-width: 60%;
-  max-height: 60%;
-  object-fit: contain;
-  transition: transform 0.2s ease;
-}
-
-.homeImg:hover {
-  transform: scale(1.1);
-}
-
-.titleDiv {
-  color: var(--accent);
-  text-align: center;
-}
-
 .contactMeNav {
-  width: 7rem;
-  height: 2rem;
+  grid-area: 1/2/1/3;
+  width: max-content;
   text-align: center;
   text-decoration: none;
   font-weight: bold;
@@ -119,57 +153,6 @@
   transform: scale(1.025);
 }
 
-#dropDownContainerMainNav {
-  position: absolute;
-  top: calc(50% - 1rem);
-  display: grid;
-  align-self: end;
-  margin-right: 2rem;
-}
-
-#listButton {
-  height: 2rem;
-  width: 7rem;
-  border-radius: 5%;
-  display: grid;
-  grid-template-columns: 1fr 0.5fr;
-  background-color: var(--brand);
-  color: var(--accent);
-  font-size: large;
-  font-weight: bold;
-  place-items: start;
-  padding: 0.25rem;
-  border: solid;
-  border-color: var(--brand);
-  transform: translateY(0.57rem);
-}
-
-#listButton img {
-  height: 90%;
-  justify-self: end;
-}
-
-#listButton:hover {
-  cursor: pointer;
-}
-
-#listOfLangs {
-  display: grid;
-  background-color: var(--brand);
-  color: var(--accent);
-  margin: 0;
-  list-style: none;
-  grid-template-columns: 1fr;
-  opacity: 0;
-  pointer-events: none;
-  transition: opacity 0.25s ease-in-out;
-  z-index: 99;
-  border-radius: 5% 0% 5% 5%;
-  width: 10rem;
-  height: 7rem;
-  transform: translateX(-3rem);
-}
-
 #listOfLangs:hover {
   cursor: pointer;
 }
@@ -185,13 +168,23 @@ input {
 }
 
 @media (max-width: 415px) {
-  #dropDownContainerMainNav {
+  #listButton {
     display: none;
+  }
+  #hamburgerMenu {
+    display: grid;
+  }
+  .hamburgerOrDropdown {
+    align-content: center;
+    justify-content: end;
   }
 }
 
 @media (min-width: 415px) {
-  #hamburgerMenuIcon {
+  #hamburgerMenu {
     display: none;
+  }
+  #listButton {
+    display: grid;
   }
 }

@@ -8,7 +8,7 @@ body {
   background-color: var(--neutral);
   display: flex;
   flex-direction: column;
-  padding-top: 5rem;
+  padding-top: 4rem;
   font-family: sans-serif, "Arial";
 }
 
@@ -61,7 +61,6 @@ footer {
   grid-auto-columns: 1fr;
   place-items: center;
   margin-top: 1rem;
-  margin-bottom: 1rem;
   padding-bottom: 1rem;
   padding-top: 1rem;
   background-color: var(--accent);
@@ -172,6 +171,7 @@ a:hover {
 .flagTitleContainer h5 {
   margin-left: 0.2rem;
   width: 90%;
+  color: black;
 }
 
 .iconContainer {
@@ -192,19 +192,19 @@ a:hover {
 }
 
 #github {
-  background-color: gray;
+  background-color: rgba(128, 128, 128, 0.8);;
 }
 
 #twitter {
-  background-color: skyblue;
+  background-color: rgba(135, 207, 235, 0.8);
 }
 
 #email {
-  background-color: beige;
+  background-color: rgba(245, 245, 220, 0.8);
 }
 
 #cv {
-  background-color: var(--windows95);
+  background-color: rgba(1, 130, 129, 0.35);
 }
 
 /* Nav bar */
