@@ -38,9 +38,9 @@
               }
             );
             // Display message sent for 3 seconds
-            messageSentDialog.style.display = "block";
+            messageSentDialog.style.opacity = "1";
             setTimeout(function () {
-              messageSentDialog.style.display = "none";
+              messageSentDialog.style.opacity = "0";
               textarea.value = "";
               emailText.value = "";
               nameText.value = "";
@@ -116,10 +116,12 @@
             class="messageField"
             id="textBox"
             placeholder=" Compose your message"></textarea>
-          <input id="submitBtn" type="submit" value="Send" />
+          <div class="bottomButtons">
+            <input id="submitBtn" type="submit" value="Send" />
+            <dialog id="messageSent">Message Sent</dialog>
+          </div>
         </form>
       </div>
-      <dialog id="messageSent">Message Sent</dialog>
     </div>
   </body>
 </html>
