@@ -21,6 +21,10 @@ body {
     background-color: var(--neutral);
 }
 
+nav {
+    background-color: var(--accent) !important; 
+}
+
 .centerBlock {
     width: 90%;
     min-width: 300px;
@@ -28,10 +32,11 @@ body {
     position: relative;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    background-color:var(--accent);
+    background-color:var(--neutral);
     border-radius: 10px;
     box-shadow: 0 0 20px rgba(100, 100, 100, 0.2);
     margin-top: 5rem;
+    margin-bottom: 2rem;
 }
 
 .leftBlock {

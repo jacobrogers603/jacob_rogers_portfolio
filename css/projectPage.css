@@ -15,3 +15,7 @@ iframe {
   ); 
   border: none; 
 }
+
+nav {
+  background-color: var(--accent) !important;
+}

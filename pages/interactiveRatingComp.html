@@ -4,9 +4,9 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="css/colors.css" />
+    <link rel="stylesheet" href="../css/colors.css" />
+    <link rel="stylesheet" href="../css/projectPage.css" />
     <link rel="stylesheet" href="../css/topNav.css" />
-    <link rel="stylesheet" href="../css/dropdownCheckboxList.css" />
     <script src="../assets/js/filter.js"></script>
     <title>Document</title>
   </head>
@@ -14,36 +14,16 @@
   <body>
     <nav class="topNav">
       <div class="navGrid">
-        <div class="brandIcon">
-          <a href="../index.html">
-            <img class="homeImg" src="../assets/images/home.png" />
+        <a class="brandIcon" href="../index.html">
+          <img src="../assets/images/moose_dilute.png" />
+        </a>
+        <div class="navRHS">
+          <a class="contactMeNav" href="../pages/contact.html">
+            <p>Contact Me</p>
           </a>
         </div>
-        <div class="titleDiv"></div>
-        <a class="contactMeNav" href="../pages/contact.html">Contact Me</a>
       </div>
     </nav>
-    <div class="mainContent">
-      <div class="dropdownContainer">
-        <button id="listButton" onclick="filterDropDownToggle()">
-          <p>Filter</p>
-          <img src="../assets/images/chevron_down.png" alt="list arrow icon" />
-        </button>
-        <ul id="listOfLangs">
-          <li class="langOption" onclick="optionSelected('html')">
-            <input type="checkbox" id="htmlBox" />
-            HTML
-          </li>
-          <li class="langOption" onclick="optionSelected('css')">
-            <input type="checkbox" id="cssBox" />
-            CSS
-          </li>
-          <li class="langOption" onclick="optionSelected('js')">
-            <input type="checkbox" id="jsBox" />
-            JavaScript
-          </li>
-        </ul>
-      </div>
-    </div>
+    <iframe src="" class="responsive-iframe"></iframe>
   </body>
 </html>
