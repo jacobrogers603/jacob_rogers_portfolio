@@ -353,6 +353,11 @@ nav {
   margin-right: 1.25rem;
   margin-bottom: 3.25rem;
   color: var(--brand);
+  scrollbar-width: none;
+}
+
+.projectDesc::-webkit-scrollbar {
+  display: none;
 }
 
 /* See Code button */
