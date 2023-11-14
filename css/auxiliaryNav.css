@@ -72,8 +72,7 @@
 }
 
 #listButtonAux img {
-  height: 90%;
-  justify-self: end;
+  height: 80%;
 }
 
 #listButtonAux:hover {

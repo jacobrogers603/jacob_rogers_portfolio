@@ -17,18 +17,23 @@ window.onload = function () {
 // Function to make the filter drop down menu appear or hide.
 function filterDropDownToggle(input) {
   var listOfLangs;
+  var listButtonChevron;
   if (input === "aux") {
     listOfLangs = document.getElementById("listOfLangsAux");
+    listButtonChevron = document.getElementById("listButtonChevronAux");
   } else {
     listOfLangs = document.getElementById("listOfLangs");
+    listButtonChevron  = document.getElementById("listButtonChevron");
   }
 
   if (listOfLangs.style.opacity === "0" || listOfLangs.style.opacity === "") {
     listOfLangs.style.opacity = "1";
     listOfLangs.style.pointerEvents = "auto";
+    listButtonChevron.src = "assets/images/chevron_up.png";
   } else {
     listOfLangs.style.opacity = "0";
     listOfLangs.style.pointerEvents = "none";
+    listButtonChevron.src = "assets/images/chevron_down.png";
   }
 }
 
