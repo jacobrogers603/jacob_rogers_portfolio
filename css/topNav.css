@@ -147,8 +147,13 @@
   transition: transform 0.2s ease;
   display: grid;
   place-items: center;
+  /* justify-items: center; */
   text-decoration: none;
   font-weight: bold;
+}
+
+.contactMeNav p {
+  margin: auto;
 }
 
 .contactMeNav:hover {

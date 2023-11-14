@@ -35,3 +35,5 @@
 // update the index page of your portfolio to account for this project, and rename this file accordingly
 // done
 
+// Note for project images, the height of the image, centered in gimp on a --brand background color, must be 764px with aspect ratio preserved.
+// The background is 1920x1080.
