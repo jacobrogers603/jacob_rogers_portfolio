@@ -145,15 +145,15 @@
   margin-right: 0.5rem;
   padding: 0.5rem;
   transition: transform 0.2s ease;
-  display: grid;
-  place-items: center;
-  /* justify-items: center; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
   text-decoration: none;
   font-weight: bold;
 }
 
 .contactMeNav p {
-  margin: auto;
+  margin: 0;
 }
 
 .contactMeNav:hover {
@@ -184,6 +184,9 @@ input {
   .hamburgerOrDropdown {
     align-content: center;
     justify-content: end;
+  }
+  .contactMeNav {
+    padding: 0.25rem; 
   }
 }
 
