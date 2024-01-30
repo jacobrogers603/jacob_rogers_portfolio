@@ -5,6 +5,18 @@ window.onload = function () {
   var cssBox = document.getElementById("cssBox");
   var jsBoxAux = document.getElementById("jsBoxAux");
   var jsBox = document.getElementById("jsBox");
+  var nextJsBox = document.getElementById("nextJsBox");
+  var nextJsBoxAux = document.getElementById("nextJsBoxAux");
+  var reactBox = document.getElementById("reactBox");
+  var reactBoxAux = document.getElementById("reactBoxAux");
+  var databaseBox = document.getElementById("databaseBox");
+  var databaseBoxAux = document.getElementById("databaseBoxAux");
+  var authBox = document.getElementById("authBox");
+  var authBoxAux = document.getElementById("authBoxAux");
+  var tsBox = document.getElementById("tsBox");
+  var tsBoxAux = document.getElementById("tsBoxAux");
+  var tailwindBox = document.getElementById("tailwindBox");
+  var tailwindBoxAux = document.getElementById("tailwindBoxAux");
 
   htmlBoxAux.checked = true;
   htmlBox.checked = true;
@@ -12,6 +24,18 @@ window.onload = function () {
   cssBox.checked = true;
   jsBoxAux.checked = true;
   jsBox.checked = true;
+  nextJsBox.checked = true;
+  nextJsBoxAux.checked = true;
+  reactBox.checked = true;
+  reactBoxAux.checked = true;
+  databaseBox.checked = true;
+  databaseBoxAux.checked = true;
+  authBox.checked = true;
+  authBoxAux.checked = true;
+  tsBox.checked = true;
+  tsBoxAux.checked = true;
+  tailwindBox.checked = true;
+  tailwindBoxAux.checked = true;
 };
 
 // Function to make the filter drop down menu appear or hide.
@@ -23,7 +47,7 @@ function filterDropDownToggle(input) {
     listButtonChevron = document.getElementById("listButtonChevronAux");
   } else {
     listOfLangs = document.getElementById("listOfLangs");
-    listButtonChevron  = document.getElementById("listButtonChevron");
+    listButtonChevron = document.getElementById("listButtonChevron");
   }
 
   if (listOfLangs.style.opacity === "0" || listOfLangs.style.opacity === "") {
@@ -45,6 +69,18 @@ function optionSelected(lang) {
   var cssBox = document.getElementById("cssBox");
   var jsBoxAux = document.getElementById("jsBoxAux");
   var jsBox = document.getElementById("jsBox");
+  var nextJsBoxAux = document.getElementById("nextJsBoxAux");
+  var nextJsBox = document.getElementById("nextJsBox");
+  var reactBoxAux = document.getElementById("reactBoxAux");
+  var reactBox = document.getElementById("reactBox");
+  var databaseBoxAux = document.getElementById("databaseBoxAux");
+  var databaseBox = document.getElementById("databaseBox");
+  var authBoxAux = document.getElementById("authBoxAux");
+  var authBox = document.getElementById("authBox");
+  var tsBoxAux = document.getElementById("tsBoxAux");
+  var tsBox = document.getElementById("tsBox");
+  var tailwindBox = document.getElementById("tailwindBox");
+  var tailwindBoxAux = document.getElementById("tailwindBoxAux");
 
   switch (lang) {
     case "html":
@@ -59,11 +95,41 @@ function optionSelected(lang) {
       jsBox.checked = !jsBox.checked;
       jsBoxAux.checked = !jsBoxAux.checked;
       break;
+    case "nextJs":
+      nextJsBox.checked = !nextJsBox.checked;
+      nextJsBoxAux.checked = !nextJsBoxAux.checked;
+      break;
+    case "react":
+      reactBox.checked = !reactBox.checked;
+      reactBoxAux.checked = !reactBoxAux.checked;
+      break;
+    case "database":
+      databaseBox.checked = !databaseBox.checked;
+      databaseBoxAux.checked = !databaseBoxAux.checked;
+      break;
+    case "auth":
+      authBox.checked = !authBox.checked;
+      authBoxAux.checked = !authBoxAux.checked;
+      break;
+    case "ts":
+      tsBox.checked = !tsBox.checked;
+      tsBoxAux.checked = !tsBoxAux.checked;
+      break;
+    case "tailwind":
+      tailwindBox.checked = !tailwindBox.checked;
+      tailwindBoxAux.checked = !tailwindBoxAux.checked;
+      break;
   }
 
   var htmlUsed = false;
   var cssUsed = false;
   var jsUsed = false;
+  var nextJsUsed = false;
+  var reactUsed = false;
+  var databaseUsed = false;
+  var authUsed = false;
+  var tsUsed = false;
+  var tailwindUsed = false;
 
   if (htmlBox.checked) {
     htmlUsed = true;
@@ -74,8 +140,36 @@ function optionSelected(lang) {
   if (jsBox.checked) {
     jsUsed = true;
   }
+  if (nextJsBox.checked) {
+    nextJsUsed = true;
+  }
+  if (reactBox.checked) {
+    reactUsed = true;
+  }
+  if (databaseBox.checked) {
+    databaseUsed = true;
+  }
+  if (authBox.checked) {
+    authUsed = true;
+  }
+  if (tsBox.checked) {
+    tsUsed = true;
+  }
+  if (tailwindBox.checked) {
+    tailwindUsed = true;
+  }
 
-  filterCards(htmlUsed, cssUsed, jsUsed);
+  filterCards(
+    htmlUsed,
+    cssUsed,
+    jsUsed,
+    nextJsUsed,
+    reactUsed,
+    databaseUsed,
+    authUsed,
+    tsUsed,
+    tailwindUsed
+  );
 }
 
 // Close the filter drop down if the screen goes to mobile size.
@@ -89,9 +183,7 @@ window.addEventListener("resize", function (event) {
   }
 });
 
-// Filter the project cards based on the dropdown menu selections.
-function filterCards(htmlUsed, cssUsed, jsUsed) {
-  console.log(htmlUsed, cssUsed, jsUsed);
+function filterCards(htmlUsed, cssUsed, jsUsed, nextJsUsed, reactUsed, databaseUsed, authUsed, tsUsed, tailwindUsed) {
   // Find the project grid.
   var projectGrid = document.getElementById("projectGrid");
 
@@ -106,20 +198,24 @@ function filterCards(htmlUsed, cssUsed, jsUsed) {
     var langsUsed = project.querySelector(".langsUsed");
     var langsUsedChildren = langsUsed.children;
 
+    // Loop through all the languages checkboxes and check if any of them is used.
     for (var lang of langsUsedChildren) {
-      if (lang.className === "htmlUsed" && htmlUsed === true) {
-        safeFlag = true;
-        break;
-      }
-      if (lang.className === "cssUsed" && cssUsed === true) {
-        safeFlag = true;
-        break;
-      }
-      if (lang.className === "jsUsed" && jsUsed === true) {
+      if (
+        (lang.className === "htmlUsed" && htmlUsed === true) ||
+        (lang.className === "cssUsed" && cssUsed === true) ||
+        (lang.className === "jsUsed" && jsUsed === true) ||
+        (lang.className === "nextJsUsed" && nextJsUsed === true) ||
+        (lang.className === "reactUsed" && reactUsed === true) ||
+        (lang.className === "databaseUsed" && databaseUsed === true) ||
+        (lang.className === "authUsed" && authUsed === true) ||
+        (lang.className === "tsUsed" && tsUsed === true) ||
+        (lang.className === "tailwindUsed" && tailwindUsed === true)
+      ) {
         safeFlag = true;
         break;
       }
     }
+
     if (safeFlag === false) {
       project.style.display = "none";
     } else {

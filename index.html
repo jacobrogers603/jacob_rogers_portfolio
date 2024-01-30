@@ -32,6 +32,30 @@
                 <img id="listButtonChevron" src="assets/images/chevron_down.png" alt="list arrow icon" />
               </button>
               <ul id="listOfLangs">
+                <li class="langOption" onclick="optionSelected('nextJs')">
+                  <input type="checkbox" class="checkboxInput" id="nextJsBox" />
+                  Next JS
+                </li>
+                <li class="langOption" onclick="optionSelected('react')">
+                  <input type="checkbox" class="checkboxInput" id="reactBox" />
+                  React
+                </li>
+                <li class="langOption" onclick="optionSelected('ts')">
+                  <input type="checkbox" class="checkboxInput" id="tsBox" />
+                  TypeScript
+                </li>
+                <li class="langOption" onclick="optionSelected('tailwind')">
+                  <input type="checkbox" class="checkboxInput" id="tailwindBox" />
+                  TailwindCSS
+                </li>
+                <li class="langOption" onclick="optionSelected('database')">
+                  <input type="checkbox" class="checkboxInput" id="databaseBox" />
+                  Database
+                </li>
+                <li class="langOption" onclick="optionSelected('auth')">
+                  <input type="checkbox" class="checkboxInput" id="authBox" />
+                  Authentication
+                </li>
                 <li class="langOption" onclick="optionSelected('html')">
                   <input type="checkbox" class="checkboxInput" id="htmlBox" />
                   HTML
@@ -44,7 +68,7 @@
                   <input type="checkbox" class="checkboxInput" id="jsBox" />
                   JavaScript
                 </li>
-              </ul>
+              </ul>              
             </div>
           </div>
           <a class="contactMeNav" href="pages/contact.html">
@@ -77,6 +101,30 @@
           <img id="listButtonChevronAux" src="assets/images/chevron_down.png" alt="list arrow icon" />
         </button>
         <ul id="listOfLangsAux">
+          <li class="langOption" onclick="optionSelected('nextJs')">
+            <input type="checkbox" class="checkboxInput" id="nextJsBoxAux" />
+            Next JS
+          </li>
+          <li class="langOption" onclick="optionSelected('react')">
+            <input type="checkbox" class="checkboxInput" id="reactBoxAux" />
+            React
+          </li>
+          <li class="langOption" onclick="optionSelected('ts')">
+            <input type="checkbox" class="checkboxInput" id="tsBoxAux" />
+            TypeScript
+          </li>
+          <li class="langOption" onclick="optionSelected('tailwind')">
+            <input type="checkbox" class="checkboxInput" id="tailwindBoxAux" />
+            TailwindCSS
+          </li>
+          <li class="langOption" onclick="optionSelected('database')">
+            <input type="checkbox" class="checkboxInput" id="databaseBoxAux" />
+            Database
+          </li>
+          <li class="langOption" onclick="optionSelected('auth')">
+            <input type="checkbox" class="checkboxInput" id="authBoxAux" />
+            Authentication
+          </li>
           <li class="langOption" onclick="optionSelected('html')">
             <input type="checkbox" class="checkboxInput" id="htmlBoxAux" />
             HTML
@@ -89,7 +137,7 @@
             <input type="checkbox" class="checkboxInput" id="jsBoxAux" />
             JavaScript
           </li>
-        </ul>
+        </ul>       
       </div>
     </nav>
     <header>
@@ -165,7 +213,7 @@
         </nav>
       </div>
       <div id="projectGrid">
-        <div class="project">
+        <div class="project" id="netflixClone">
           <a href="https://jacob-rogers-netflix-clone.netlify.app/auth" target="_blank" class="imageContainer">
             <img
               src="assets/images/netflixClone.jpg"
@@ -176,12 +224,17 @@
             <h4>Netflix Clone</h4>
           </a>
           <ul class="langsUsed">
-            <li class="cssUsed">Next JS</li>
-            <li class="htmlUsed">React</li>
-            <li class="cssUsed">TailwindCSS</li>
+            <li class="nextJsUsed">Next JS</li>
+            <li class="reactUsed">React</li>
+            <li class="databaseUsed">MongoDB</li>
+            <li class="tailwindUsed">TailwindCSS</li>
+            <li class="authUsed">Authentication</li>
+            <li class="tsUsed">TypeScript</li>
           </ul>
           <p class="projectDesc">
-            A full-stack clone of Netflix. Using React, Next JS 14, Next-Auth. 
+            A fullstack clone of Netflix I made using React, Next JS 14, MongoDB, Next-Auth, and TailwindCSS.
+            This project makes use of a frontend and backend features to handle user authentication and storing data like videos, users, or a user's favorites. 
+            It is hosted using Netlify.
           </p>
           <div class="seeButtons">
               <button
@@ -196,42 +249,38 @@
               </button>
             </div>  
         </div>
-        <div class="project">
-          <div class="imageContainer">
-            <a href="pages/productReviewCardComp.html">
-              <img
-                src="assets/images/productReviewCard.png"
-                alt="image of project"
-                class="projectImg" />
-            </a>
-          </div>
-          <a href="pages/productReviewCardComp.html" class="projectTitle">
-            <h4>Product Review Card</h4>
+        <div class="project" id="myPortfolio">
+          <a href="https://github.com/jacobrogers603/jacob_rogers_portfolio" target="_blank" class="imageContainer">
+            <img
+              src="assets/images/portfolio.png"
+              alt="image of project"
+              class="projectImg" />
+          </a>
+          <a href="https://github.com/jacobrogers603/jacob_rogers_portfolio" target="_blank" class="projectTitle">
+            <h4>My Portfolio</h4>
           </a>
           <ul class="langsUsed">
             <li class="htmlUsed">HTML</li>
             <li class="cssUsed">CSS</li>
+            <li class="jsUsed">JavaScript</li>
           </ul>
           <p class="projectDesc">
-            This project shows an example of a purchase card for a business selling perfume. It is a
-            challenge from <b>Front End Mentor.io</b>.
-            To make this, pure HTML and CSS were used. This was one of the first projects I made when
-            I started teaching myself web development.
+            This webpage you are looking at now I wrote myself with pure CSS, HTML, and JavaScript.
+            This was one of the first projects I worked on when I started learning web development, and I made it a point to not use a framework
+            or external library to give myself a lesson in the fundamentals of HTML, CSS, and JavaScript.
+            <br><br>
+            There is no "See Demo" button because this is the webpage you are looking at now. But, you can
+            see the source code for how I constructed this portfolio page by clicking the "See Code" button.
           </p>
           <div class="seeButtons">
             <button
               class="seeCodeButton"
-              onclick="linkToPage('https://github.com/jacobrogers603/frontEndMentorChallenges/tree/main/challenges/product_review_card')">
+              onclick="linkToPage('https://github.com/jacobrogers603/jacob_rogers_portfolio')">
               See Code
-            </button>
-            <button
-              class="seeDemoButton"
-              onclick="linkToInternalPage('pages/productReviewCardComp.html')">
-              See Demo
             </button>
           </div>
         </div>
-        <div class="project">
+        <div class="project" id="interactRating">
           <a href="pages/interactiveRatingComp.html" class="imageContainer">
             <img
               src="assets/images/interactiveRatingComp.png"
@@ -265,38 +314,75 @@
               </button>
             </div>  
         </div>
-        <div class="project">
-          <a href="https://github.com/jacobrogers603/jacob_rogers_portfolio" target="_blank" class="imageContainer">
+        <div class="project" id="ProfileCardComp">
+          <a href="pages/profileCardComp.html" class="imageContainer">
             <img
-              src="assets/images/portfolio.png"
+              src="assets/images/profileCardComp.png"
               alt="image of project"
               class="projectImg" />
           </a>
-          <a href="https://github.com/jacobrogers603/jacob_rogers_portfolio" target="_blank" class="projectTitle">
-            <h4>My Portfolio</h4>
+          <a href="pages/profileCardComp.html" class="projectTitle">
+            <h4>Profile Card Component</h4>
+          </a>
+          <ul class="langsUsed">
+            <li class="htmlUsed">HTML</li>
+            <li class="tailwindUsed">TailwindCSS</li>
+          </ul>
+          <p class="projectDesc">
+            This is a mock up of a profile card on a hypothetical social media site for a person living in London.
+            It is a challenge from <b>Front End Mentor.io</b>.
+            I used HTML and TailwindCSS for this project to quicken the rate I can create CSS after having worked on a number of projects 
+            with pure CSS.   
+          </p>
+          <div class="seeButtons">
+              <button
+                class="seeCodeButton"
+                onclick="linkToPage('https://github.com/jacobrogers603/frontEndMentorChallenges/tree/main/challenges/profile-card-component')">
+                See Code
+              </button>
+              <button
+                class="seeDemoButton"
+                onclick="linkToInternalPage('pages/profileCardComp.html')">
+                See Demo
+              </button>
+            </div>  
+        </div>
+        <div class="project" id="prodRevCard">
+          <div class="imageContainer">
+            <a href="pages/productReviewCardComp.html">
+              <img
+                src="assets/images/productReviewCard.png"
+                alt="image of project"
+                class="projectImg" />
+            </a>
+          </div>
+          <a href="pages/productReviewCardComp.html" class="projectTitle">
+            <h4>Product Review Card</h4>
           </a>
           <ul class="langsUsed">
             <li class="htmlUsed">HTML</li>
             <li class="cssUsed">CSS</li>
-            <li class="jsUsed">JavaScript</li>
           </ul>
           <p class="projectDesc">
-            This webpage you are looking at now I wrote myself with pure CSS, HTML, and JavaScript.
-            This was one of the first projects I worked on when I started learning web development, and I made it a point to not use a framework
-            or external library to give myself a lesson in the fundamentals of HTML, CSS, and JavaScript.
-            <br><br>
-            There is no "See Demo" button because this is the webpage you are looking at now. But, you can
-            see the source code for how I constructed this portfolio page by clicking the "See Code" button.
+            This project shows an example of a purchase card for a business selling perfume. It is a
+            challenge from <b>Front End Mentor.io</b>.
+            To make this, pure HTML and CSS were used. This was one of the first projects I made when
+            I started teaching myself web development.
           </p>
           <div class="seeButtons">
             <button
               class="seeCodeButton"
-              onclick="linkToPage('https://github.com/jacobrogers603/jacob_rogers_portfolio')">
+              onclick="linkToPage('https://github.com/jacobrogers603/frontEndMentorChallenges/tree/main/challenges/product_review_card')">
               See Code
             </button>
+            <button
+              class="seeDemoButton"
+              onclick="linkToInternalPage('pages/productReviewCardComp.html')">
+              See Demo
+            </button>
           </div>
-        </div>
-        <div class="project">
+        </div>    
+        <div class="project" id="statsPrevCard">
           <a href="pages/statsPreviewCard.html" class="imageContainer">
             <img
               src="assets/images/statsPrevCard.png"
@@ -327,40 +413,7 @@
                 See Demo
               </button>
             </div>  
-        </div>
-        <div class="project">
-          <a href="pages/profileCardComp.html" class="imageContainer">
-            <img
-              src="assets/images/profileCardComp.png"
-              alt="image of project"
-              class="projectImg" />
-          </a>
-          <a href="pages/profileCardComp.html" class="projectTitle">
-            <h4>Profile Card Component</h4>
-          </a>
-          <ul class="langsUsed">
-            <li class="htmlUsed">HTML</li>
-            <li class="cssUsed">TailwindCSS</li>
-          </ul>
-          <p class="projectDesc">
-            This is a mock up of a profile card on a hypothetical social media site for a person living in London.
-            It is a challenge from <b>Front End Mentor.io</b>.
-            I used HTML and TailwindCSS for this project to quicken the rate I can create CSS after having worked on a number of projects 
-            with pure CSS.   
-          </p>
-          <div class="seeButtons">
-              <button
-                class="seeCodeButton"
-                onclick="linkToPage('https://github.com/jacobrogers603/frontEndMentorChallenges/tree/main/challenges/profile-card-component')">
-                See Code
-              </button>
-              <button
-                class="seeDemoButton"
-                onclick="linkToInternalPage('pages/profileCardComp.html')">
-                See Demo
-              </button>
-            </div>  
-        </div>
+        </div>        
       </div>
       <div class="rightSideBar"></div>
     </div>
