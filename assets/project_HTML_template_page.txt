@@ -33,8 +33,7 @@
 // replace the src in the iframe to be where your project is hosted on the internet.
 // change the title.
 // update the index page of your portfolio to account for this project, and rename this file accordingly.
-// for project images, the height of the image, centered in gimp on a --brand background color, must be 764px with aspect ratio preserved.
-// The background is 1920x1080.
-// You can also use MS paint, set the background color, set size of background to 1920x1080, 
+// for project images use a --brand background color #2f3f46
+// use MS paint, set the background color, set size of background to 1920x1080, 
 // paste in the image, set the height to 764px with aspect  ratio preserved, center it by eye w/ a ruler.
 // The middle of the paint page is 960x540.
