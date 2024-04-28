@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../css/colors.css" />
+    <link rel="stylesheet" href="../css/topNav.css" />
+    <link rel="stylesheet" href="../css/majorProjDec.css" />
+    <script src="../assets/js/index.js"></script>
+    <title>Mark My Words - Project Page</title>
+  </head>
+  <body>
+    <nav class="topNav">
+      <div class="navGrid">
+        <a class="brandIcon" href="../index.html">
+          <img src="../assets/images/moose_dilute.png" alt="Brand Icon" />
+        </a>
+        <div class="navRHS">
+          <a class="contactMeNav" href="../pages/contact.html">
+            <p>Contact Me</p>
+          </a>
+        </div>
+      </div>
+    </nav>
+
+    <main class="projectDetails">
+      <h1>Mark My Words</h1>
+      <p class="projDesc">
+        This website provides an online profile for storing notes in markdown
+        format. Notes can be saved and viewed in rendered markdown, offering a
+        clean and readable presentation. The interface mimics a file explorer,
+        allowing the creation and management of files, folders, and subfolders.
+      </p>
+      <div class="seeButtons">
+        <button
+          class="seeDemoButton"
+          onclick="linkToPage('https://mark-my-words.netlify.app/auth')">
+          See Live Demo
+        </button>
+        <button
+          class="seeCodeButton"
+          onclick="linkToPage('https://github.com/jacobrogers603/mark_my_words')">
+          See Code
+        </button>
+      </div>
+      <div class="credentials">
+        <h2 style>Guest Login Credentials!</h2>
+        <p>
+          <strong>Email:</strong>
+          guest@email.com
+        </p>
+        <p>
+          <strong>Password:</strong>
+          Guest1234
+        </p>
+      </div>
+      <div class="keyFeatures">
+        <h2>Key Features</h2>
+        <ul>
+          <li>
+            <strong>Templates</strong>
+            <p>
+              Create note templates for common note structures, accessible from
+              a drop-down menu during editing.
+            </p>
+          </li>
+          <li>
+            <strong>Downloading and Uploading</strong>
+            <p>
+              Download notes in markdown or HTML format, or upload markdown
+              files. Whole directories can be downloaded as ZIP files.
+            </p>
+          </li>
+          <li>
+            <strong>Sharing and Access Control</strong>
+            <p>
+              Configure view and edit permissions for other accounts via a
+              note's settings page, with link sharing available.
+            </p>
+          </li>
+          <li>
+            <strong>Public Directory</strong>
+            <p>
+              Each user has a public directory visible to others via a shareable
+              profile link.
+            </p>
+          </li>
+          <li>
+            <strong>Images</strong>
+            <p>
+              Embed images in notes using markdown syntax, manage images in user
+              settings.
+            </p>
+          </li>
+        </ul>
+      </div>
+      <div class="techUsed">
+        <h2>Technologies Used</h2>
+        <ul>
+          <li>React</li>
+          <li>Next.js 14</li>
+          <li>TypeScript</li>
+          <li>MongoDB</li>
+          <li>NextAuth</li>
+          <li>Netlify</li>
+          <li>Linode Server</li>
+        </ul>
+      </div>
+    </main>
+  </body>
+</html>

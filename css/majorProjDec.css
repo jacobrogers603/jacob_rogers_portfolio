@@ -1,0 +1,146 @@
+/* majorProjDec.css */
+main {
+  font-family: "Arial", sans-serif;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  align-items: start;
+  padding: 0 10%;
+  padding-top: 6rem;
+}
+
+.seeButtons {
+  width: 100%;
+  display: grid;
+  padding: 0 1rem;
+  grid-template-columns: 1fr 1fr;
+  place-items: center;
+}
+
+.seeCodeButton {
+  height: 2rem;
+  width: 75%;
+  background-color: var(--brand);
+  color: var(--neutral);
+  font-weight: bold;
+  border: none;
+  border-radius: 5%;
+  transition: transform 0.2s ease, font-weight 0.2s ease;
+}
+
+.seeCodeButton:hover {
+  transform: scale(1.1);
+  font-weight: 700;
+}
+
+.seeDemoButton {
+  height: 3rem;
+  width: 75%;
+  font-weight: bold;
+  font-size: large;
+  background-color: rgba(1, 130, 129, 0.8);
+  color: var(--neutral);
+  border: none;
+  border-radius: 5%;
+  transition: transform 0.2s ease, font-weight 0.2s ease;
+}
+
+.seeDemoButton:hover {
+  transform: scale(1.1);
+  font-weight: 700;
+}
+
+nav {
+  background-color: var(--accent) !important;
+}
+
+.featureImageContainer {
+  display: grid;
+  place-items: center;
+  width: calc(50%);
+}
+
+.featureImage {
+  width: 100%;
+  border-radius: 10px;
+}
+
+.credentials {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  margin: 0 10%;
+  margin-top: 2rem;
+  padding: 1rem;
+  border: 1px solid black;
+  border-radius: 10px;
+  background-color: mistyrose;
+  align-self: center;
+}
+
+.credentials h2 {
+  color: red;
+  margin-bottom: 1rem;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+li {
+  margin-bottom: 0.8rem;
+  display: flex;
+  align-items: center;
+}
+
+li::before {
+  content: "•";
+  color: var(--brand);
+  font-size: large;
+  margin-right: 10px;
+}
+
+.projDesc {
+  margin: 2rem 0;
+  font-size: large;
+}
+
+.keyFeatures {
+  margin-top: 2rem;
+  text-align: left;
+}
+
+.keyFeatures h2 {
+  margin-bottom: 1rem;
+}
+
+.keyFeatures ul li {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+}
+
+.keyFeatures ul li strong {
+  margin-bottom: 0.5rem;
+  color: rgba(1, 130, 129, 0.8);
+  font-weight: 900;
+}
+
+.keyFeatures ul li::before {
+  content: "";
+}
+
+.techUsed {
+  margin-top: 2rem;
+  color: rgba(1, 130, 129, 0.8);
+}
+
+.techUsed h2 {
+  color: black;
+  margin-bottom: 1rem;
+}
+
+.techUsed li {
+    font-size: large;
+}
